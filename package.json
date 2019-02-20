@@ -1,0 +1,39 @@
+{
+  "name": "dinnerfast",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "marcianos",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --watch --progress",
+    "prettier": "prettier 'js/**/*.js' 'tests/**/*.test.js' 'scss/**/*.scss' --write",
+    "lint": "eslint js/ tests/ && stylelint scss/",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "enzyme": "^3.9.0",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.1.0",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.4",
+    "@types/react-dom": "^16.8.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.5",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
