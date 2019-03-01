@@ -1,17 +1,29 @@
 import * as React from "react";
 import { render } from "react-dom";
 
+import Page from "./Page";
+import RecipesContainer from "./RecipesContainer";
+
 const initializeApp = () => {
-  render(<App name="marciano" />, document.querySelector("main"));
+  render(<App />, document.querySelector("main"));
 };
 
-export interface HelloProps {
-  name: string;
-}
+const App = () => (
+  <Page>
+    {pageProps => {
+      return (
+        <section>
+          <h1>{pageProps.type}</h1>
+          <h2>{"Let's eat..."}</h2>
 
-const App = (props: HelloProps) => {
-  return <h1>Hello, {props.name}</h1>;
-};
+          <section>
+            <RecipesContainer />
+          </section>
+        </section>
+      );
+    }}
+  </Page>
+);
 
 initializeApp();
 

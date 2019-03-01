@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --watch --progress",
-    "prettier": "prettier 'js/**/*.js' 'tests/**/*.test.js' 'scss/**/*.scss' --write",
-    "lint": "eslint js/ tests/ && stylelint scss/",
+    "prettier": "prettier 'src/**/*.tsx' --write",
+    "lint": "eslint **/**/*.tsx",
     "test": "jest"
   },
   "devDependencies": {
@@ -23,12 +23,15 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "jest": "^24.1.0",
+    "prettier": "^1.16.4",
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "@types/lodash-es": "^4.17.2",
     "@types/react": "^16.8.4",
     "@types/react-dom": "^16.8.2",
     "awesome-typescript-loader": "^5.2.1",
+    "lodash-es": "^4.17.11",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "source-map-loader": "^0.2.4",
